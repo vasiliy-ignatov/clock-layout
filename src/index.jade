@@ -2,5 +2,32 @@ extends ./tpl/layout
 
 block page
 	.container
-		h1 Hello world
+		-
+			var numbers = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'zero'];
+		
+		.clock
+			each item in numbers
+				.clock__number(class='clock__number_' + item)
+					.clock__line
+						span 
+						span 
+					.clock__line
+						span 
+						span 
+					.clock__line
+						span 
+						span 
+					.clock__line
+						span 
+						span 
+					.clock__line
+						span 
+						span 
+					.clock__line
+						span 
+						span 
+					.clock__line
+						span 
+						span 
+
 

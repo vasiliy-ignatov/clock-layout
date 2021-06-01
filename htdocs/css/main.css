@@ -227,6 +227,138 @@
 * {
   box-sizing: border-box; }
 
+body {
+  background-color: #F2F1EF; }
+
 .container {
   max-width: 1400px;
   margin: 0 auto; }
+
+.clock {
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  background-size: 1170px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 200px; }
+  .clock__number {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 98px;
+    margin: 0 9px; }
+    .clock__number::after {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-bottom: 177.55%; }
+    .clock__number .clock__line {
+      position: absolute;
+      display: block;
+      background-color: green; }
+      .clock__number .clock__line span {
+        content: '';
+        position: absolute;
+        width: 100%;
+        padding-bottom: 100%;
+        left: 0;
+        overflow: hidden; }
+        .clock__number .clock__line span::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          padding-bottom: 100%;
+          background: green; }
+        .clock__number .clock__line span:first-child {
+          top: 1px;
+          transform: translateY(-100%); }
+          .clock__number .clock__line span:first-child::after {
+            transform: translate(-50%, 15%) rotate(-45deg); }
+        .clock__number .clock__line span:last-child {
+          bottom: 1px;
+          transform: translateY(100%); }
+          .clock__number .clock__line span:last-child::after {
+            transform: translate(-50%, -115%) rotate(-45deg); }
+      .clock__number .clock__line:nth-child(odd) {
+        width: 22.44%;
+        padding-bottom: 47.02%; }
+      .clock__number .clock__line:nth-child(even) {
+        width: 47.02%;
+        padding-bottom: 22.44%;
+        left: 50%;
+        transform: translateX(-50%); }
+        .clock__number .clock__line:nth-child(even) span {
+          width: 47.82%;
+          height: 100%;
+          padding-bottom: 0;
+          top: 0;
+          left: auto;
+          right: auto;
+          bottom: auto;
+          transform: none; }
+          .clock__number .clock__line:nth-child(even) span:first-child {
+            left: 1px;
+            transform: translateX(-100%); }
+            .clock__number .clock__line:nth-child(even) span:first-child::after {
+              left: 0;
+              top: 0;
+              transform: translateX(60%) rotate(-45deg); }
+          .clock__number .clock__line:nth-child(even) span:last-child {
+            right: 1px;
+            transform: translateX(100%); }
+            .clock__number .clock__line:nth-child(even) span:last-child::after {
+              transform: translate(-110%, -50%) rotate(-45deg); }
+      .clock__number .clock__line:nth-child(1) {
+        left: 0;
+        top: 14.94%; }
+      .clock__number .clock__line:nth-child(3) {
+        left: 0;
+        bottom: 14.94%; }
+      .clock__number .clock__line:nth-child(5) {
+        right: 0;
+        top: 14.94%; }
+      .clock__number .clock__line:nth-child(7) {
+        right: 0;
+        bottom: 14.94%; }
+      .clock__number .clock__line:nth-child(2) {
+        top: 0; }
+      .clock__number .clock__line:nth-child(4) {
+        top: 50%;
+        transform: translate(-50%, -50%); }
+      .clock__number .clock__line:nth-child(6) {
+        bottom: 0; }
+  .clock__number_one .clock__line {
+    display: none; }
+    .clock__number_one .clock__line:nth-child(5), .clock__number_one .clock__line:nth-child(7) {
+      display: block; }
+  .clock__number_two .clock__line {
+    display: none; }
+    .clock__number_two .clock__line:nth-child(2), .clock__number_two .clock__line:nth-child(3), .clock__number_two .clock__line:nth-child(4), .clock__number_two .clock__line:nth-child(5), .clock__number_two .clock__line:nth-child(6) {
+      display: block; }
+  .clock__number_three .clock__line {
+    display: none; }
+    .clock__number_three .clock__line:nth-child(2), .clock__number_three .clock__line:nth-child(4), .clock__number_three .clock__line:nth-child(5), .clock__number_three .clock__line:nth-child(6), .clock__number_three .clock__line:nth-child(7) {
+      display: block; }
+  .clock__number_four .clock__line {
+    display: none; }
+    .clock__number_four .clock__line:nth-child(1), .clock__number_four .clock__line:nth-child(4), .clock__number_four .clock__line:nth-child(5), .clock__number_four .clock__line:nth-child(7) {
+      display: block; }
+  .clock__number_five .clock__line {
+    display: none; }
+    .clock__number_five .clock__line:nth-child(1), .clock__number_five .clock__line:nth-child(2), .clock__number_five .clock__line:nth-child(4), .clock__number_five .clock__line:nth-child(6), .clock__number_five .clock__line:nth-child(7) {
+      display: block; }
+  .clock__number_six .clock__line {
+    display: none; }
+    .clock__number_six .clock__line:nth-child(1), .clock__number_six .clock__line:nth-child(2), .clock__number_six .clock__line:nth-child(3), .clock__number_six .clock__line:nth-child(4), .clock__number_six .clock__line:nth-child(6), .clock__number_six .clock__line:nth-child(7) {
+      display: block; }
+  .clock__number_seven .clock__line {
+    display: none; }
+    .clock__number_seven .clock__line:nth-child(2), .clock__number_seven .clock__line:nth-child(5), .clock__number_seven .clock__line:nth-child(7) {
+      display: block; }
+  .clock__number_nine .clock__line:nth-child(3) {
+    display: none; }
+  .clock__number_zero .clock__line:nth-child(4) {
+    display: none; }
