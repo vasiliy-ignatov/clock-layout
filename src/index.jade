@@ -3,31 +3,42 @@ extends ./tpl/layout
 block page
 	.container
 		-
-			var numbers = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'zero'];
-		
-		.clock
-			each item in numbers
-				.clock__number(class='clock__number_' + item)
-					.clock__line
-						span 
-						span 
-					.clock__line
-						span 
-						span 
-					.clock__line
-						span 
-						span 
-					.clock__line
-						span 
-						span 
-					.clock__line
-						span 
-						span 
-					.clock__line
-						span 
-						span 
-					.clock__line
-						span 
-						span 
+			var NUMBER_LINE_COUNT = 7;
 
-
+		.clock.js-clock
+			.clock__group
+				.clock__number.js-clock__item
+					- for(var i = 0; i < NUMBER_LINE_COUNT; i++)
+						.clock__line
+							span
+							span
+				.clock__number.js-clock__item
+					- for(var i = 0; i < NUMBER_LINE_COUNT; i++)
+						.clock__line
+							span
+							span
+			.clock__dots.js-clock__dots
+				span
+				span
+			.clock__group
+				.clock__number.js-clock__item
+					- for(var i = 0; i < NUMBER_LINE_COUNT; i++)
+						.clock__line
+							span
+							span
+				.clock__number.js-clock__item
+					- for(var i = 0; i < NUMBER_LINE_COUNT; i++)
+						.clock__line
+							span
+							span
+			.clock__group.clock__group_seconds.js-clock__seconds
+				.clock__number.js-clock__item
+					- for(var i = 0; i < NUMBER_LINE_COUNT; i++)
+						.clock__line
+							span
+							span
+				.clock__number.js-clock__item
+					- for(var i = 0; i < NUMBER_LINE_COUNT; i++)
+						.clock__line
+							span
+							span

@@ -1,21 +1,73 @@
 .clock {
+	position: relative;
+	max-width: 654px;
+	margin: 0 auto;
+	top: 50vh;
 	font-size: 0;
 	line-height: 0;
 	text-align: center;
-	// background-image: url('../img/back.jpg');
+	transform: translateY(-50%);
 	background-size: 1170px auto;
 	background-repeat: no-repeat;
 	background-position: center;
-	margin-top: 200px;
 
+	&_symbols {
+		max-width: 1200px;
+		margin: 50px auto 100px;
+	}
+	&__group {
+		width: 34.862385%;
+		display: inline-block;
+		vertical-align: bottom;
+
+		&_seconds {
+			width: 24.159%;
+			padding: 0.25773%;
+		}
+	}
+	&__dots {
+		position: relative;
+		display: inline-block;
+		vertical-align: bottom;
+		width: 3.3639%;
+		margin: 0 1.3761%;
+		transform: skewX(-3deg);
+		opacity: 0;
+
+		&.active {
+			opacity: 1;
+		}
+		&::after {
+			content: '';
+			display: block;
+			width: 100%;
+			padding-bottom: 790.90%;
+		}
+		span {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			padding-bottom: 100%;
+			background-color: $green;
+
+			&:first-child {
+				top: 50%;
+				transform: translateY(-200%);
+			}
+			&:last-child {
+				bottom: 50%;
+				transform: translateY(200%);
+			}
+		}
+	}
 	&__number {
 		position: relative;
 		display: inline-block;
-		vertical-align: middle;
-		width: 98px;
-		margin: 0 9px;
-		// outline: 1px solid $green;
-		// opacity: .6;
+		vertical-align: bottom;
+		width: 96px;
+		width: 42.1052%;
+		margin: 0 3.947%;
+		transform: skewX(-3deg);
 
 		&::after {
 			content: '';
@@ -71,14 +123,12 @@
 				padding-bottom: 47.02%;
 			}
 			&:nth-child(even) {
-				// display: none;
 				width: 47.02%;
 				padding-bottom: 22.44%;
 				left: 50%;
 				transform: translateX(-50%);
 
 				span {
-					// display: none;
 					width: 47.82%;
 					height: 100%;
 					padding-bottom: 0;

@@ -228,26 +228,72 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #F2F1EF; }
+  background-color: #030303; }
 
 .container {
   max-width: 1400px;
   margin: 0 auto; }
+  @media (max-width: 992px) {
+    .container {
+      padding: 0 15px; } }
 
 .clock {
+  position: relative;
+  max-width: 654px;
+  margin: 0 auto;
+  top: 50vh;
   font-size: 0;
   line-height: 0;
   text-align: center;
+  transform: translateY(-50%);
   background-size: 1170px auto;
   background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 200px; }
+  background-position: center; }
+  .clock_symbols {
+    max-width: 1200px;
+    margin: 50px auto 100px; }
+  .clock__group {
+    width: 34.862385%;
+    display: inline-block;
+    vertical-align: bottom; }
+    .clock__group_seconds {
+      width: 24.159%;
+      padding: 0.25773%; }
+  .clock__dots {
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 3.3639%;
+    margin: 0 1.3761%;
+    transform: skewX(-3deg);
+    opacity: 0; }
+    .clock__dots.active {
+      opacity: 1; }
+    .clock__dots::after {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-bottom: 790.90%; }
+    .clock__dots span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding-bottom: 100%;
+      background-color: #25db00; }
+      .clock__dots span:first-child {
+        top: 50%;
+        transform: translateY(-200%); }
+      .clock__dots span:last-child {
+        bottom: 50%;
+        transform: translateY(200%); }
   .clock__number {
     position: relative;
     display: inline-block;
-    vertical-align: middle;
-    width: 98px;
-    margin: 0 9px; }
+    vertical-align: bottom;
+    width: 96px;
+    width: 42.1052%;
+    margin: 0 3.947%;
+    transform: skewX(-3deg); }
     .clock__number::after {
       content: '';
       display: block;
@@ -256,7 +302,7 @@ body {
     .clock__number .clock__line {
       position: absolute;
       display: block;
-      background-color: green; }
+      background-color: #25db00; }
       .clock__number .clock__line span {
         content: '';
         position: absolute;
@@ -271,7 +317,7 @@ body {
           left: 50%;
           width: 100%;
           padding-bottom: 100%;
-          background: green; }
+          background: #25db00; }
         .clock__number .clock__line span:first-child {
           top: 1px;
           transform: translateY(-100%); }
