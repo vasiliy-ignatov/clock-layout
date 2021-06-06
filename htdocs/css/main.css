@@ -255,9 +255,10 @@ body {
   .clock__group {
     width: 34.862385%;
     display: inline-block;
-    vertical-align: bottom; }
+    vertical-align: top;
+    margin: 0 .5%; }
     .clock__group_seconds {
-      width: 24.159%;
+      width: 16.159%;
       padding: 0.25773%; }
   .clock__dots {
     position: relative;

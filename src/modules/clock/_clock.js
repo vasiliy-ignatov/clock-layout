@@ -26,8 +26,6 @@ $(function () {
 			
 			setInterval(() => {
 				inst.getCurrentTime();
-
-				// if (dots.hasClass('active'))
 				dots.toggleClass('active');
 			}, 1000);
 		},
