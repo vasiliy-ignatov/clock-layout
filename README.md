@@ -1,3 +1,5 @@
+## [Find out the current time](https://vasiliy-ignatov.github.io/clock-layout/htdocs/)
+
 Установка модульных зависимостей
 ```bash
 npm install
